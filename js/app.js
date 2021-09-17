@@ -1,4 +1,5 @@
 let deckId = ''
+let message = document.getElementById('message')
 
 // data displayed on button click
 document.getElementById('new-deck').addEventListener('click', function() {
@@ -19,6 +20,21 @@ document.getElementById('draw-cards').addEventListener('click', function(){
     <img src="${data.cards[0].image}" />
     <img src="${data.cards[1].image}" />`
     console.log(data)
+
+    let cardValue1 = data.cards[0].value
+    let cardValue2 = data.cards[1].value
+    // console.log(cardValue1)
+    // console.log(cardValue2)
+    if(cardValue1 > cardValue2){
+      message.innerHTML = 'Card One wins'
+    } else if (cardValue1 < cardValue2){
+      message.innerHTML = 'Card Two wins'
+    } else {
+      message.innerHTML = 'WAR!'
+    }
+    
+
+
   })
 })
 

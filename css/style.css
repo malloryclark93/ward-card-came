@@ -1,4 +1,19 @@
 body {
   background-image: url(/images/green-felt.png);
   background-size: cover;
+  color: white;
+  text-align: center;
+}
+
+button {
+  color: black;
+  background-color: yellow;
+  padding: 15px;
+  font-weight: bold;
+  border-radius: 25px;
+  border-style: none;
+}
+
+button#draw-cards {
+  margin-top: 1em;
 }

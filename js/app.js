@@ -10,11 +10,14 @@ document.getElementById('new-deck').addEventListener('click', function() {
     })
 })
 
+// get data for new 2 cards drawn
 document.getElementById('draw-cards').addEventListener('click', function(){
-  console.log(deckId)
   fetch(`https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`)
   .then(response => response.json())
   .then(data => {
+    document.getElementById('images').innerHTML = `
+    <img src="${data.cards[0].image}" />
+    <img src="${data.cards[1].image}" />`
     console.log(data)
   })
 })

@@ -1,5 +1,6 @@
 let deckId = ''
 let message = document.getElementById('message')
+let images = document.getElementById('images')
 
 // data displayed on button click
 document.getElementById('new-deck').addEventListener('click', function() {

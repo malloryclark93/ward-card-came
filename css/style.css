@@ -3,17 +3,25 @@ body {
   background-size: cover;
   color: white;
   text-align: center;
+  margin: 2rem;
+  font-family: 'Bungee', cursive;
 }
 
 button {
-  color: black;
+  color: crimson;
   background-color: yellow;
   padding: 15px;
   font-weight: bold;
-  border-radius: 25px;
+  border-radius: 15px;
   border-style: none;
+  font-size: 20px;
 }
 
 button#draw-cards {
   margin-top: 1em;
 }
+
+img {
+  padding: 1em
+}
+

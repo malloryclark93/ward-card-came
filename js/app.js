@@ -2,6 +2,7 @@ let deckId = ''
 let message = document.getElementById('message')
 let images = document.getElementById('images')
 
+
 // data displayed on button click
 document.getElementById('new-deck').addEventListener('click', function() {
   fetch('https://deckofcardsapi.com/api/deck/new/shuffle/')
@@ -18,11 +19,14 @@ document.getElementById('draw-cards').addEventListener('click', function(){
   .then(response => response.json())
   .then(data => {
     document.getElementById('images').innerHTML = `
-    <img src="${data.cards[0].image}" />
-    <img src="${data.cards[1].image}" />`
+    <h2>You:</h2>
+    <img src="${data.cards[0].image}" /> </br>
+    <img src="${data.cards[1].image}" />
+    <h2>Computer:</h2>
+    `
     console.log(data)
 
-    let cardValue1 = data.cards[0].value
+    let cardValue1 = data.cards[0].value 
     let cardValue2 = data.cards[1].value
     // console.log(cardValue1)
     // console.log(cardValue2)
